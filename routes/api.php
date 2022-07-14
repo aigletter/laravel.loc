@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/v1/users/{id}', [\App\Http\Controllers\UserController::class, 'show'])->name('api.users.show');
+Route::get('/v1/users', [\App\Http\Controllers\UserController::class, 'index']);
+Route::put('/v1/users/{id}', [\App\Http\Controllers\UserController::class, 'update'])->name('api.users.update');
+Route::post('/v1/users', [\App\Http\Controllers\UserController::class, 'store']);

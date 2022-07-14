@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c3d88fa6639c9463d85260309c03bb68",
+    "content-hash": "dd2d526193771f16635f014f2397675e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -880,6 +880,50 @@
                 }
             ],
             "time": "2022-06-09T08:26:02+00:00"
+        },
+        {
+            "name": "ithillel/math",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "../math",
+                "reference": "3cb739b54193d574ea0c96f25daf6bd3f85631ac"
+            },
+            "require": {
+                "laravel/framework": ">6.0",
+                "php": "^7.2.5|^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5.8|^9.3.3"
+            },
+            "type": "project",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Ithillel\\Cource\\Math\\MathServiceProvider"
+                    ],
+                    "aliases": {
+                        "Math": "Ithillel\\Cource\\Math\\MathFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ithillel\\Cource\\Math\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "The Laravel Framework.",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "laravel/framework",
